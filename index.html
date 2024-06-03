@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/x-icon" href="assets/logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f78891a75a.js" crossorigin="anonymous"></script>
+        <Title>SolariS - Belajar Masak Praktis!</Title>
+    </head>
+    <body>
+        <!--navigasi menu-->
+        <nav>
+            <div><a href="index.html"><img class="logo-icon" src="assets/logo.png"></a></div>
+            <section>
+                <a class="nav-item">Beranda</a>
+                <a class="nav-item">Program Kursus</a>
+                <a class="nav-item">Hubungi Kami</a> 
+            </section>
+        </nav>
+
+        <!--konten utama-->
+        <main>
+            <!--beranda-->
+            <section class="main-sctn">
+                <header>
+                    <h1>Halo <b class="sapanama">Calon Chef</b>, siap belajar masak?</h1>
+                </header>
+                <article>
+                    <p style="font-size: large; text-align: justify;">Selamat datang di website <b class="sapanama">SolariS Culinary School</b> Wakanda yang telah <b>BERHASIL</b> meningkatkan kompetensi para siswa dan <b>TERBUKTI</b> menjadikan <b>90%</b> lulusannya <b>bekerja di hotel bintang 5</b> <i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i> dan 10%-nya melanjutkan berkarier di bidang kuliner. Tunggu apa lagi? Pilih kursus yang ingin <b class="sapanama">kamu</b> ikuti dibawah ini dan bersiaplah menjadi chef profesional.</p>
+                    <div class="banner-container"></div>
+                </article>
+            </section>
+            <hr>
+
+            <!--program kursus-->
+            <section class="main-sctn">
+                <header>
+                    <h1>Program Kursus Yang Tersedia</h1>
+                </header>
+                <article class="list-kursus">
+                    <div class="item-kursus">
+                        <div><img class="img-kursus" src="assets/reguler.jpg" alt="Kursus Reguler"></div>
+                        <h2>Reguler Course</h2>
+                        <p>Program sekolah kuliner 10 bulan yang memberimu Sertifikasi Profesi Nasional dan jaminan magang di hotel bintang 5 selama 6 bulan.</p>
+                    </div>
+                    
+                    <div class="item-kursus">
+                        <div><img class="img-kursus" src="assets/cruise.jpg" alt="Kursus Kapal Pesiar"></div>
+                        <h2>Cruise Ship Course</h2>
+                        <p>Program sekolah kapal pesiar dengan kurikulum terpadu yang siap mengantarkanmu terjun bekerja secara profesional di dalam industri kuliner.</p>
+                    </div>
+                    <div class="item-kursus">
+                        <div><img class="img-kursus" src="assets/private.jpg" alt="Kursus Privat"></div>
+                        <h2>Private Course</h2>
+                        <p>Program belajar 70++ menu intensif 1-1 dengan Chef Professional mulai dari appetizer, soup, main course, dan dessert.</p>
+                    </div>
+                </article>
+            </section>
+            <hr>
+
+            <!--hubungi kami-->
+            <section class="main-sctn">
+                <header>
+                    <h1>Hubungi Kami</h1>
+                </header>
+                <article>
+                    <div>
+                        <p>Kamu punya pertanyaan? Hubungi kami dengan mengisi form dibawah ini:</p>
+                    </div>
+                </article>
+
+                <section class="form-and-result">
+                    <section>
+                        <table> 
+                            <form action="" method="get" class="daftar"> 
+                                <tr> 
+                                    <td> 
+                                        <label for="nama">Nama Lengkap</label> 
+                                    </td> 
+                                    <td>:</td>
+                                    <td>
+                                        <input type="text" size="30" id="nama" placeholder="Tulis namamu disini"/> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td>
+                                        <label for="nohp">No.Handphone</label> 
+                                    </td>
+                                    <td>:</td>
+                                    <td>
+                                        <input type="telnum" size="30" id="nohp" placeholder="Format: 62821xxx"/> 
+                                    </td> 
+                                </tr> 
+                                <tr> 
+                                    <td>
+                                        <label for="pilihankursus">Kursus yang diminati</label> 
+                                    </td>
+                                    <td>:</td>
+                                    <td>
+                                        <input type="checkbox" id="reguler" name="pilihankursus" />Reguler Course<br>
+                                        <input type="checkbox" id="cruiseship" name="pilihankursus" />Cruise Ship Course<br>
+                                        <input type="checkbox" id="private" name="pilihankursus" />Private Course
+                                    </td> 
+                                </tr>
+                                <tr> 
+                                    <td>
+                                        <label for="email">Email Aktif</label> 
+                                    </td>
+                                    <td>:</td>
+                                    <td>
+                                        <input type="email" size="30" id="email" placeholder="nama@email.com" /> 
+                                    </td> 
+                                </tr>
+                                <tr> 
+                                    <td style="display: flex; flex-direction: row; align-items: start;"><label for="pesan"> 
+                                        Pesan 
+                                        </label> 
+                                    </td>
+                                    <td style="vertical-align: top;">:</td>
+                                    <td>
+                                        <textarea rows="4" style="width: 98%" name="pesan" placeholder="Tulis pesan/pertanyaanmu disini"></textarea>
+                                    </td> 
+                                </tr> 
+                                <tr>
+                                    <td colspan="3">
+                                        <input type="submit" style="min-width:100%" value="Submit Sekarang!">
+                                    </td>
+                                </tr>
+                            </form> 
+                        </table>
+                    </section>
+
+                    <section class="result-container">
+                        <div class="tampilkan-result">
+                            <p style="opacity: 30%;">Disini akan tampill hasil submit form menggunakan javasccript.</p>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </main>
+
+        <!--footer & credit-->
+        <footer class="footer">
+            <section class="credit">Gambar oleh &nbsp<a href="https://pixabay.com/users/picturexphotobnb-16088423/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5055083" target="_blank">Geoff Gill</a>&nbsp & &nbsp<a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2623071" target="_blank">StockSnap</a>&nbsp dari &nbsp<a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5055083" target="_blank">Pixabay</a></section>
+            <section class="creator">Dibuat &nbsp<s>sambil nyemil oskadon</s>&nbsp oleh &nbsp<a href="https://dmg.my.id/" target="_blank">Dyah</a></section>
+        </footer>
+    </body>
+</html>
