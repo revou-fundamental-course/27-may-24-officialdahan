@@ -21,17 +21,17 @@
     </head>
     <body id="top">
         <!--tombol Back to top-->
-        <button onclick="topFunction()" id="b2t" title="Back to top"><i class="fa-solid fa-angles-up"></i></button>
+        <button onclick="topFunction()" id="b2t" title="Back to top"><i class="fa-solid fa-angles-up"></i><br>Back to top</button>
 
         <!--navigasi menu-->
-        <nav>
+        <nav class="nav-wrapper">
             <div class="logo-area">
                 <a href="/27-may-24-officialdahan">
                     <img class="logo-icon" src="assets/logo.png">
                 </a>
             </div>
             <section>
-                <a class="nav-item">Beranda</a>
+                <a class="nav-item" href="#beranda">Beranda</a>
                 <a class="nav-item" href="#profil">Profil</a>
                 <a class="nav-item" href="#program">Program Kursus</a>
                 <a class="nav-item" href="#hubungi">Hubungi Kami</a> 
@@ -43,12 +43,22 @@
             <!--beranda-->
             <section class="main-sctn">
                 <header>
-                    <h1 style="margin-block-end: 1px;">Halo <span id="sayhi" class="sapanama"></span>, siap belajar masak?</h1>
+                    <h1 id="beranda" style="margin-block-end: 1px;">Halo <span id="sayhi" class="sapanama">Calon Chef</span>, siap belajar masak?</h1>
                     <button id="ubahnama" class="tombol-ubahnama">Bukan namamu? Klik disini untuk ganti nama</button>
                 </header>
                 <article>
                     <p style="font-size: x-large; text-align: center;">Selamat datang di website <b class="sapanama">SolariS Culinary School Wakanda</b></p>
-                    <div class="banner-container"></div>
+                    <!-- <div class="banner-container"></div> -->
+                    <div>
+                        <img class="img-slideshow" src="assets/banner.jpg">
+                        <img class="img-slideshow" src="assets/cruise.jpg">
+                        <img class="img-slideshow" src="assets/private.jpg">
+                        <img class="img-slideshow" src="assets/reguler.jpg">
+                        <div class="img-slide-button">
+                            <button onclick="plusDivs(-1)">Previous</button>
+                            <button onclick="plusDivs(1)">Next</button>
+                        </div>
+                    </div>
                 </article>
             </section>
             <hr>
@@ -59,7 +69,7 @@
                 </header>
                 <article>
                     <div>
-                        <p style="font-size: large; text-align: justify;"><b class="sapanama">SCSW</b> yang berdiri sejak tahun 1927 telah <b>TERBUKTI</b> berhasil meningkatkan kompetensi para siswa dan sebanyak <b>90%</b> alumni lulusan kami telah <b>bekerja di hotel bintang 5</b> <i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i> dan 10% lainnya melanjutkan berkarier di bidang kuliner.</p>
+                        <p style="font-size: large; text-align: justify;"><b class="sapanama">SCSW</b> yang berdiri sejak tahun 1927 telah <b>TERBUKTI</b> berhasil meningkatkan kompetensi para siswa dan sebanyak <b>90%</b> alumni lulusan kami telah <b>bekerja di hotel bintang 5</b> <i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i><i class="goldstar fa-solid fa-star"></i> dan 10% lainnya melanjutkan berkarier di bidang industri kuliner.</p>
 
                         <p style="font-size: large; text-align: justify;">Program-program yang ditawarkan oleh <b class="sapanama">SCSW</b> sejalan dengan kurikulum internasional modern dengan standar tertinggi dalam studi kuliner. Kombinasi unik antara teori akademis dan pengalaman praktis memastikan bahwa lulusan akan memiliki keterampilan dan pengetahuan yang dibutuhkan oleh dunia kerja di seluruh dunia, serta memberi mereka landasan yang kuat untuk karir profesional berkualitas tinggi di industri kuliner.</p>
                         
@@ -111,7 +121,7 @@
                             <form name="contus" onsubmit="return validateForm()"> 
                                 <tr> 
                                     <td> 
-                                        <label for="nama">Nama Lengkap</label> 
+                                        <label for="nama" id="nama">Nama Lengkap</label> 
                                     </td> 
                                     <td>:</td>
                                     <td>
@@ -120,16 +130,16 @@
                                 </tr> 
                                 <tr> 
                                     <td>
-                                        <label for="nohp">No.Handphone</label> 
+                                        <label for="nohp" id="nohp">No.Handphone</label> 
                                     </td>
                                     <td>:</td>
                                     <td>
-                                        <input type="telnum" size="30" name="nohp" placeholder="Format: 62821xxx"/> 
+                                        <input type="telnum" size="30" id="nohp" name="nohp" placeholder="Format: 62821xxx"/> 
                                     </td> 
                                 </tr>
                                 <tr> 
                                     <td>
-                                        <label for="email">Email Aktif</label> 
+                                        <label for="email" id="email">Email Aktif</label> 
                                     </td>
                                     <td>:</td>
                                     <td>
@@ -138,7 +148,7 @@
                                 </tr> 
                                 <tr> 
                                     <td style="display: flex; flex-direction: row; align-items: start;">
-                                        <label for="pilihankursus">Kursus yang diminati</label> 
+                                        <label for="pilihankursus" id="pilihankursus">Kursus yang diminati</label> 
                                     </td>
                                     <td style="vertical-align: top;">:</td>
                                     <td>
@@ -153,9 +163,8 @@
                                     </td> 
                                 </tr>
                                 <tr> 
-                                    <td style="display: flex; flex-direction: row; align-items: start;"><label for="pesan"> 
-                                        Pesan 
-                                        </label> 
+                                    <td style="display: flex; flex-direction: row; align-items: start;">
+                                        <label for="pesan" id="pesan">Pesan</label> 
                                     </td>
                                     <td style="vertical-align: top;">:</td>
                                     <td>
@@ -172,16 +181,16 @@
                     </section>
 
                     <section class="result-container">
-                        <div class="tampilkan-result">
-                            <p><b>Data yang kamu submit dibawah ini: <mark><span id="error-warning"></span></mark></b></p>
+                        <div class="tampilkan-result" id="show-result">
+                            <p><b>Data kamu dibawah ini <mark><span id="error-warning"></span></mark></b></p>
                             <p>Nama : <span id="sender-nama"></span></p>
                             <p>No.HP : <span id="sender-nohp"></span></p>
                             <p>Email : <span id="sender-email"></span></p>
                             <p>Kursus yang diminati : <span id="sender-pilihkursus"></span></p>
                             <p>Pesan/Pertanyaan : <span id="sender-pesan"></span></p>
+                            <p id="sukses-submit"></p>
                         </div>
                         <div>
-                            <p id="follow-up"></p>
                         </div>
                     </section>
                 </section>
@@ -194,7 +203,7 @@
             <section class="credit">Gambar oleh &nbsp<a href="https://pixabay.com/users/picturexphotobnb-16088423/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5055083" target="_blank">Geoff Gill</a>&nbsp & &nbsp<a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2623071" target="_blank">StockSnap</a>&nbsp dari &nbsp<a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5055083" target="_blank">Pixabay</a></section>
             
             <!--credit to creator-->
-            <section class="creator">Dibuat &nbsp<s>sambil nyemil oskadon</s>&nbsp oleh &nbsp<a href="https://dmg.my.id/" target="_blank">Dyah</a></section>
+            <section class="creator">Dibuat &nbsp<s>sambil nyemil panadol</s>&nbsp oleh &nbsp<a href="https://dmg.my.id/" target="_blank">Dyah A. N.</a></section>
         </footer>
 
     <!--JS-->

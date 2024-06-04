@@ -27,6 +27,28 @@ replaceName();
 
 document.getElementById("ubahnama").addEventListener("click", function(){replaceName()})
 
+// Script untuk banner image slide
+var slideIndex =1;
+showDivs(slideIndex);
+
+function plusDivs(n){
+  showDivs(slideIndex += n)
+}
+
+function showDivs(n){
+  var i;
+  var x = document.getElementsByClassName("img-slideshow");
+  if (n > x.length){(slideIndex = 1)}; 
+  if (n < 1){(slideIndex = x.length)};
+  for (i = 0; i < x.length; i++){
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+setInterval(() => {
+  plusDivs(1);
+}, 5000)
 
 // Script untuk validasi form
 function validateForm(){
@@ -37,7 +59,11 @@ function validateForm(){
     const pesan = document.forms["contus"]["pesan"].value;
 
     if (nama == "" || nohp == "" || email == "" || pilihKursus == "" || pesan == ""){
-        document.getElementById("error-warning").innerHTML = " BELUM lengkap, mohon periksa kembali."
+        document.getElementById("error-warning").innerHTML = ": BELUM lengkap, mohon periksa kembali."
+    }
+    
+    else{
+      document.getElementById("error-warning").innerHTML = ""
     }
 
     setSenderUI(nama, nohp, email, pilihKursus, pesan);
