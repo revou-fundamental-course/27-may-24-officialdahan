@@ -37,7 +37,7 @@ function validateForm(){
     const pesan = document.forms["contus"]["pesan"].value;
 
     if (nama == "" || nohp == "" || email == "" || pilihKursus == "" || pesan == ""){
-        document.getElementById("error-warning").innerHTML = ": BELUM lengkap. Mohon periksa kembali."
+        document.getElementById("error-warning").innerHTML = " BELUM lengkap, mohon periksa kembali."
     }
 
     setSenderUI(nama, nohp, email, pilihKursus, pesan);
