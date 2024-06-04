@@ -1,16 +1,33 @@
-/* https://coolors.co/palette/0081a7-00afb9-fdfcdc-fed9b7-f07167 */
-
-/* CSS untuk body halaaman */
+/* CSS untuk body halaman */
 body{
-    font-family: Plus Jakarta Sans;
-    /* sesuaikan body background-color dengan palette */
+    font-family: Outfit;
     background-color: #FDFCDC;
     margin: 0;
     padding: 0;
 }
-
+#b2t {
+    position: fixed;
+    bottom: 45px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #00AFB9;
+    color: #FDFCDC;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    opacity: 80%;
+  }
+  #b2t:hover {
+    background-color: #0081A7;
+  }
 h1, h2, h3, h4, h5, h6{
     color: #F07167;
+}
+h2:hover{
+    color: #00AFB9;
 }
 hr{
     height: 2px;
@@ -23,29 +40,57 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 10px 25px 10px 25px;
-    /* sesuaikan background-color dengan palette */
     background-color: #FED9B7;
 }
 nav section{
     display: flex;
+}
+.logo-area{
+    align-content: center;
 }
 .logo-icon{
     height: 50px;
     width: 50px;
 }
 .nav-item{
+    color: #0081A7;
+    /* color: #00AFB9;
+    color: #FDFCDC;
+    color: #FED9B7;
+    color: #F07167; */
     margin: 2px;
     padding: 15px;
-    border: 5px solid #00AFB9;
+    border: 2px solid #F07167;
+    border-radius: 15px;
     -webkit-text-stroke: medium;
 }
+.nav-item:hover{
+    background-color: #FDFCDC;
+    -webkit-text-stroke: large;
+}
 
-/* CSS untuk bagian Konten Utama */
+/* CSS untuk bagian konten utama */
 .main-sctn{
     margin: 25px;
 }
+.kenalan{
+    background-color: #00AFB9;
+    border-radius: 10px;
+    color: white;
+    padding:1px 15px 1px 15px;
+    width: fit-content;
+}
 .sapanama{
     color: #0081A7;
+}
+.tombol-ubahnama{
+    border-radius: 25px;
+    background-color: #00AFB9;
+    color: #FDFCDC;
+    height: 25px;
+}
+.tombol-ubahnama:hover{
+    background-color: #0081A7;
 }
 .goldstar{
     color: gold;
@@ -70,7 +115,12 @@ nav section{
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    transition: transform .2s;
     border: 3px solid #00AFB9;
+}
+.img-kursus:hover{
+    transform: scale(1.2);
+    /* border: 3px solid #F07167; */
 }
 .form-and-result{
     display: flex;
@@ -78,14 +128,28 @@ nav section{
 label{
     padding-right: 10px;
 }
+.tombol-form{
+    height: 40px;
+    background-color: #00AFB9;
+    color: #FDFCDC;
+    border-radius: 25px;
+    font-size: large;
+    min-width:100%;
+}
+.tombol-form:hover{
+    background-color: #0081A7;
+}
 .result-container{
-    width: 100%
+    width: 100%;
 }
 .tampilkan-result{
-    height: 200px;
-    margin-left: 50px;
-    padding-left: 50px;
+    margin-left: 20px;
+    padding-left: 10px;
 }
+mark {
+    background-color: red;
+    color: #FDFCDC;
+  }
 
 /* CSS untuk bagian copyright & credit */
 .footer{
