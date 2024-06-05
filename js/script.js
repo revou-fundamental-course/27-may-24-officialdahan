@@ -1,6 +1,12 @@
 // Script untuk tombol back to top
 let mybutton = document.getElementById("b2t");
 
+window.addEventListener('load', () => noTop())
+
+function noTop(){
+  mybutton.hidden = true;
+}
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
