@@ -55,9 +55,11 @@
                         <img class="img-slideshow" src="assets/banner2.jpg">
                         <img class="img-slideshow" src="assets/banner3.jpg">
                         <img class="img-slideshow" src="assets/banner4.jpg">
-                        <div class="img-slide-button">
-                            <button onclick="plusDivs(-1)">Previous</button>
-                            <button onclick="plusDivs(1)">Next</button>
+                        <img class="img-slideshow" src="assets/banner5.jpg">
+                        <div class="img-slide-caption">
+                            <i onclick="plusDivs(-1)" class="img-slide-button fa-solid fa-circle-left" title="Previous"></i>
+                            <b>Gallery <span class="sapanama">SCSW</span></b>
+                            <i onclick="plusDivs(1)" class="img-slide-button fa-solid fa-circle-right" title="Next"></i>
                         </div>
                     </div>
                 </article>
@@ -126,7 +128,7 @@
                                     </td> 
                                     <td>:</td>
                                     <td>
-                                        <input type="text" size="30" name="nama" placeholder="Tulis namamu disini"/> 
+                                        <input required type="text" name="nama" placeholder="Tulis namamu disini"/> 
                                     </td> 
                                 </tr> 
                                 <tr> 
@@ -135,7 +137,7 @@
                                     </td>
                                     <td>:</td>
                                     <td>
-                                        <input type="telnum" size="30" id="nohp" name="nohp" placeholder="Format: 62821xxx"/> 
+                                        <input required type="telnum" id="nohp" name="nohp" placeholder="Format: 62821xxx"/> 
                                     </td> 
                                 </tr>
                                 <tr> 
@@ -144,7 +146,7 @@
                                     </td>
                                     <td>:</td>
                                     <td>
-                                        <input type="email" size="30" name="email" placeholder="nama@email.com" /> 
+                                        <input required type="email" name="email" placeholder="nama@email.com" /> 
                                     </td> 
                                 </tr> 
                                 <tr> 
@@ -153,13 +155,13 @@
                                     </td>
                                     <td style="vertical-align: top;">:</td>
                                     <td>
-                                        <input type="radio" id="reguler" name="pilihkursus" value="Reguler Course" />
+                                        <input required type="radio" id="reguler" name="pilihkursus" value="Reguler Course" />
                                         <label for="reguler">Reguler Course</label><br>
-                                        <input type="radio" id="cruiseship" name="pilihkursus" value="Cruise Ship Course"/>
+                                        <input required type="radio" id="cruiseship" name="pilihkursus" value="Cruise Ship Course"/>
                                         <label for="cruiseship">Cruise Ship Course</label><br>
-                                        <input type="radio" id="private" name="pilihkursus" value="Private Course"/>
+                                        <input required type="radio" id="private" name="pilihkursus" value="Private Course"/>
                                         <label for="private">Private Course</label><br>
-                                        <input type="radio" id="undecided" name="pilihkursus" value="Belum yakin"/>
+                                        <input required type="radio" id="undecided" name="pilihkursus" value="Belum yakin"/>
                                         <label for="undecided">Masih bingung milih &#129300;</label>
                                     </td> 
                                 </tr>
@@ -169,7 +171,7 @@
                                     </td>
                                     <td style="vertical-align: top;">:</td>
                                     <td>
-                                        <textarea rows="4" style="width: 98%" name="pesan" placeholder="Tulis pesan/pertanyaanmu disini"></textarea>
+                                        <textarea required rows="4" name="pesan" placeholder="Tulis pesan/pertanyaanmu disini"></textarea>
                                     </td> 
                                 </tr> 
                                 <tr>
@@ -183,13 +185,12 @@
 
                     <section class="result-container">
                         <div class="tampilkan-result" id="show-result">
-                            <p><b>Data kamu dibawah ini <mark><span id="error-warning"></span></mark></b></p>
+                            <p><b><span id="sukses-submit" class="alert-sukses"></span></b></p>
                             <p>Nama : <span id="sender-nama"></span></p>
                             <p>No.HP : <span id="sender-nohp"></span></p>
                             <p>Email : <span id="sender-email"></span></p>
                             <p>Kursus yang diminati : <span id="sender-pilihkursus"></span></p>
                             <p>Pesan/Pertanyaan : <span id="sender-pesan"></span></p>
-                            <p id="sukses-submit"></p>
                         </div>
                         <div>
                         </div>
@@ -199,13 +200,18 @@
         </main>
 
         <!--footer & credit-->
-        <footer class="footer">
-            <!--credit to image owner-->
-            <section class="credit">Gambar oleh dari &nbsp<a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5055083" target="_blank" title="Geoff Gill, StockSnap, Abdulmajeed Hassan, Russian Federation, Roy Stephen, Svenska, Lubos Houska.">Pixabay</a></section>
+        <footer>
             
-            <!--credit to creator-->
-            <section class="creator">Dibuat &nbsp<s>sambil nyemil panadol</s>&nbsp oleh &nbsp<a href="https://dmg.my.id/" target="_blank">Dyah A. N.</a></section>
-        </footer>
+            <section class="footer">
+                <!--credit to image owner-->
+                <div class="credit">
+                    Gambar oleh dari &nbsp<a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5055083" target="_blank" title="Geoff Gill, StockSnap, Abdulmajeed Hassan, Russian Federation, Roy Stephen, Svenska, Lubos Houska, Jan Vašek.">Pixabay</a>
+                </div>
+                <!--credit to image owner-->
+                <div class="creator">
+                    Dibuat oleh &nbsp<a href="https://dmg.my.id/" target="_blank">Dyah A. N.</a>
+                </div>
+            </section>
 
     <!--JS-->
     <script src="js/script.js"></script>

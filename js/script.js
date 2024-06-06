@@ -1,4 +1,4 @@
-// Script untuk tombol back to top
+// start script untuk tombol back to top
 let mybutton = document.getElementById("b2t");
 
 window.addEventListener('load', () => noTop())
@@ -21,9 +21,9 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// end script untuk tombol back to top
 
-
-// Script untuk menyapa nama user
+// start script untuk menyapa nama user
 function replaceName() {
     let sayhi = prompt("Kenalan dulu yuk, namamu siapa?", "Calon Chef");
     document.getElementById("sayhi").innerHTML = sayhi;
@@ -32,8 +32,9 @@ function replaceName() {
 replaceName();
 
 document.getElementById("ubahnama").addEventListener("click", function(){replaceName()})
+// start script untuk menyapa nama user
 
-// Script untuk banner image slide
+// start script untuk banner autoslide
 var slideIndex =1;
 showDivs(slideIndex);
 
@@ -55,8 +56,9 @@ function showDivs(n){
 setInterval(() => {
   plusDivs(1);
 }, 5000)
+// end script untuk banner autoslide
 
-// Script untuk validasi form
+// start script untuk validasi form
 function validateForm(){
     const nama = document.forms["contus"]["nama"].value;
     const nohp = document.forms["contus"]["nohp"].value;
@@ -64,12 +66,8 @@ function validateForm(){
     const pilihKursus = document.forms["contus"]["pilihkursus"].value;
     const pesan = document.forms["contus"]["pesan"].value;
 
-    if (nama == "" || nohp == "" || email == "" || pilihKursus == "" || pesan == ""){
-        document.getElementById("error-warning").innerHTML = ": BELUM lengkap, mohon periksa kembali."
-    }
-    
-    else{
-      document.getElementById("error-warning").innerHTML = ""
+    if (nama != "" && nohp != "" && email != "" && pilihKursus != "" && pesan != ""){
+        document.getElementById("sukses-submit").innerHTML = "Siip! Tunggu ya, kamu akan segera dihubungi kembali oleh Tim Solaris."
     }
 
     setSenderUI(nama, nohp, email, pilihKursus, pesan);
@@ -84,3 +82,4 @@ function setSenderUI(nama, nohp, email, pilihKursus, pesan){
     document.getElementById("sender-pilihkursus").innerHTML = pilihKursus;
     document.getElementById("sender-pesan").innerHTML = pesan;
 }
+// end script untuk validasi form
